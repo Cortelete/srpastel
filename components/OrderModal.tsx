@@ -220,7 +220,8 @@ const OrderModal: React.FC<OrderModalProps> = ({ isOpen, onClose }) => {
                 const isCategoryOpen = openCategory === category.title;
                 const itemsInCartCount = order.filter(orderItem => category.items.some(menuItem => menuItem.id === orderItem.id)).length;
                 return (
-                  <div key={category.title} ref={el => categoryRefs.current[category.title] = el} className="bg-white/30 rounded-lg overflow-hidden transition-all duration-300">
+                  // FIX: Changed ref callback to have a void return type to fix TypeScript error.
+                  <div key={category.title} ref={el => { categoryRefs.current[category.title] = el; }} className="bg-white/30 rounded-lg overflow-hidden transition-all duration-300">
                     <button onClick={() => handleCategoryClick(category.title)} className="w-full flex justify-between items-center p-3 text-left">
                       <div className="flex items-center">
                         <span className="text-xl mr-2">{category.icon}</span>
