@@ -47,7 +47,8 @@ const App: React.FC = () => {
     return (
         <div className="min-h-screen w-full flex flex-col items-center justify-between p-4 bg-gray-100 animated-gradient">
             <main className="w-full max-w-lg mx-auto flex flex-col items-center justify-center flex-grow">
-                <div className="w-full p-6 md:p-8 bg-white/30 backdrop-blur-md rounded-3xl shadow-2xl">
+                <div className="relative w-full p-6 md:p-8 bg-white/30 backdrop-blur-md rounded-3xl shadow-2xl">
+                    <img src="/outubrorosa.png" alt="Selo de conscientização Outubro Rosa" className="absolute -top-3 -left-3 w-16 h-auto transform rotate-[-15deg] drop-shadow-lg" />
                     <header className="text-center">
                         <img
                             src="/logo.png"
